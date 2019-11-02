@@ -1,6 +1,7 @@
-var phoneNumber = document.getElementById('phoneNumber');
-var userMessage = document.getElementById('userMessage');
-
-function func_link_generator() {
-	document.getElementById('generatedLink') = 'https://api.whatsapp.com/send?phone='+phoneNumber.value+'text='+userMessage.value';
-}
+generateLink.addEventListener('submit', function(e) {
+	var phoneNumber = document.getElementById('phoneNumber');
+	var userMessage = document.getElementById('userMessage');
+	var link = 'https://api.whatsapp.com/send?phone='+phoneNumber+'&text='+userMessage;
+	document.getElementById('generatedLink').innerHTML = link;
+e.preventDefault();
+});
