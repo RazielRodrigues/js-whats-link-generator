@@ -12,12 +12,13 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/generator.css">
 
     <title>Criador de links de WhatsApp - Crie o seu link de forma fácil</title>
   </head>
   <body class="container" style="background: #075e54;">
 	<center>
-		<div class="card text-center" style="width: 30rem; margin-top: 5rem; border-radius: 20px;">
+		<div class="card text-center w-50" style="margin-top: 4rem; border-radius: 20px;">
 		  <div class="card-body">
 		  	<h3 class="mx-auto mt-10">Criador de links de WhatsApp</h3>
 				<br>				
@@ -25,16 +26,16 @@
 				  <div class="form-group">
 				    <label for="formGroupExampleInput">Número de telefone:</label>
 
-				    <input style="border-radius: 20px;" id="phoneNumber" type="text" class="form-control" id="formGroupExampleInput" placeholder="+55998765432">
+				    <input maxlength="15" style="border-radius: 20px;" id="phoneNumber" type="tel" class="form-control" id="formGroupExampleInput" placeholder="+55998765432">
 
 				  </div>
 				  <div class="form-group">
 				    <label for="formGroupExampleInput2">Mensagem</label>
 
-				    <input style="border-radius: 20px;" id="userMessage" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Digite uma mensagem...">
+				    <input maxlength="120" style="border-radius: 20px;" id="userMessage" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Digite uma mensagem...">
 
 				  </div>
-
+				  
 				    <button style="border-radius: 25px;" class="btn btn-success" type="submit">Gerar link</button>
 
 					<br>
@@ -44,9 +45,14 @@
 		</div>
 		<br>
 		<br>
-			<a class="alert alert-dark d-none" role="alert" id="generatedLink" href="#" target="blank"></a>
-
-
+			<div class="hide" id="hide">
+				<div class="alert alert-dark alert-dismissible fade show w-75" role="alert">
+				  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				    <span aria-hidden="true">&times;</span>
+				  </button>	
+				  <a id="generatedLink" class="alert-link" href="#" target="blank"></a>
+				</div>
+			</div>
 	</center>
     <!-- Optional JavaScript -->
     <script src="js/generator.js"></script>

@@ -1,3 +1,7 @@
-.close-alert{
+.hide{
 	display: none;
+}
+
+.show{
+	display: show;
 }
