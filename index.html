@@ -16,17 +16,20 @@
 
     <title>Criador de links de WhatsApp - Crie o seu link de forma fácil</title>
   </head>
-  <body class="container" style="background: #075e54;">
-	<center class="row">
-		<div class="card text-center w-50 col-6" style="margin-top: 5rem; border-radius: 20px;">
+  <body style="background: #075e54;">
+	<center class="container">
+		<div class="card text-center col-sm-6" style="margin-top: 5rem; border-radius: 20px;">
 		  <div class="card-body">
-		  	<h3 class="mx-auto mt-10">Criador de links de WhatsApp</h3>
-				<br>				
-				<form class="mx-auto col-8" id="generateLink">
+		  	<h3 class="mt-10">Criador de links de WhatsApp</h3>
+					<li class="list-group-item">Insira o nº do WhatsApp Ex: 85996605866</li>
+					<li class="list-group-item">Clique em “gerar link”</li>
+					<li class="list-group-item">Copie o link</li>
+				<br>
+				<br>		
+				<form class="mx-auto" id="generateLink">
 				  <div class="form-group">
 				    <label for="formGroupExampleInput">Número de telefone:</label>
 
-				    <input maxlength="15" style="border-radius: 20px;" id="phoneNumber" type="tel" class="form-control" id="formGroupExampleInput" placeholder="55998765432">
 
 				  </div>
 				  <div class="form-group">
@@ -37,37 +40,26 @@
 				  </div>
 
 				    <button style="border-radius: 25px;" class="btn btn-success" type="submit">Gerar link</button>
-
-					<br>
-		    		<br>
 				</form>
 		  </div>
 		</div>
-		<br>
-		<br>
-
-		<div class="text-center w-50 col-6" style="margin-top: 8rem;">
-			<div class="card-body" style="border-radius: 50px;">
-				<ol class="list-group">
-					<li class="list-group-item"><h3>Como funciona?</h3></li>
-					<li class="list-group-item">Insira o nº do WhatsApp Ex: 85996605866</li>
-					<li class="list-group-item">Clique em “gerar link”</li>
-					<li class="list-group-item">Copie o link</li>
-				</ol>
+			<br>
+	<br>
+	<center>
+		<div class="hide" id="hide">
+			<div class="alert alert-dark alert-dismissible fade show w-auto" role="alert">
+				 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				   <span aria-hidden="true">&times;</span>
+				 </button>	
+				 <a id="generatedLink" class="alert-link" href="#" target="blank"></a>
 			</div>
 		</div>
 	</center>
-	<br><br>
-	<center>
-				<div class="hide" id="hide">
-				<div class="alert alert-dark alert-dismissible fade show w-auto" role="alert">
-				  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				    <span aria-hidden="true">&times;</span>
-				  </button>	
-				  <a id="generatedLink" class="alert-link" href="#" target="blank"></a>
-				</div>
-			</div>
-		</center>
+
+	</center>
+
+
+
     <!-- Optional JavaScript -->
     <script src="js/generator.js"></script>
 	</script>   
